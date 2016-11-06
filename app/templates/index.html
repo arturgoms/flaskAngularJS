@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +15,16 @@
         }
 
     </style>
+    
 
 </head>
-
-    <body>
-
+    <body ng-controller="HomeController">
         <h1 class="new-class" ng-class="{'other-class': name=='Marcelo'}">Hello,
-
-            <span ng-if="name">{{ '{{ name }}' }}!</span>
+            <span ng-if="name">({name})!</span>
             <span ng-if="!name">World</span>
             !
         </h1>
         <input type="text" ng-model="name" >
-
-
         <!-- Latest compiled and minified CSS -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"</script>
         <!-- Latest compiled and minified JavaScript -->
@@ -41,5 +37,8 @@
         <link rel="stylesheet" href="../static/css/main.css">
         <!-- AngularJS  -->
         <script type="text/javascript" src="../static/js/angular.min.js"></script>
+        <script type="text/javascript" src="../static/js/app/app.module.js"></script>
+        <script type="text/javascript" src="../static/js/app/app.config.js"></script>
+        <script type="text/javascript" src="../static/js/app/app.controller.js"></script>
     </body>
 </html>
